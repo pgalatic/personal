@@ -32,9 +32,8 @@ Node *parseNodeList(FILE *fp);
 
 /// findAllPaths()
 /// 	Traverses the list of nodes and determines
-/// 	all possible paths of BOARD_SIZE, based on 
-/// 	the Neighbors array of each Node. Includes
-/// 	paths that have a free space in the middle.
+/// 	all possible (non-looping) paths, based on 
+/// 	the Neighbors array of each Node.
 ///
 /// args - 
 ///		Node *root - pointer to the root of the
@@ -44,24 +43,7 @@ Node *parseNodeList(FILE *fp);
 ///		A 2D array populated with a list of 
 ///		paths.
 
-StackADT findAllPaths(Node *root);
+StackADT findAllPaths(Node *root, int NUMNODES);
 
-/// rootStemTraversal()
-/// 	Traverses a graph in order to find all paths
-/// 	of size N from a given start node to any 
-/// 	other node. This function MUST be iterated 
-/// 	upon to have the desired result.
-///	
-///		See findAllPaths for an example of this
-///		iteration.
-///
-/// args - 
-/// 	Node *start - the 'root' of the traversal
-///		const unsigned int N - the target length of the path
-///
-/// returns - 
-///		A stack of path stacks, if one exists, or NULL.
-
-StackADT rootStemTraversal(Node *root, Node *start, const unsigned int N);
 
 #endif // PATH_FINDER_H

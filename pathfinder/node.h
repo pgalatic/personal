@@ -89,6 +89,15 @@ void setAllOnPathFalse(Node *root);
 
 void setAllTerminalFalse(Node *root);
 
+///	listSize()
+///	Returns the size of a linked list.
+///
+///	args -
+///	Node *root - pointer to the head of the
+///		linked list
+
+int listSize(Node *root);
+
 /// freeList()
 ///	Frees all the nodes in a linked list.
 ///

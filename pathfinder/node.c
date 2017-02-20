@@ -86,6 +86,15 @@ void setAllTerminalFalse(Node *root){
 	
 }
 
+int listSize(Node *root){
+	int size = 0;
+	while (root != NULL){
+		size++;
+		root = root->next;
+	}
+	return size;
+}
+
 /// Frees a linked list of Nodes and marks it
 /// as NULL.
 void freeList(Node *root){
