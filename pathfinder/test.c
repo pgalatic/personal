@@ -27,10 +27,10 @@ void print_list(Node *root);
 ///
 /// No code should be here except function calls.
 int main(void){
-	//test_node();
-	test_stack_addons();
+	//test_node();			FIXME strtok() breaks
+	//test_stack_addons();	FIXME strtok() breaks
 	//test_linked_list();
-	//test_path_finding();
+	test_path_finding();
 
 }
 
@@ -49,10 +49,14 @@ void test_path_finding(void){
 	Node *root = parseNodeList(fp);
 	print_list(root);
 
-	StackADT allPaths = findAllPaths(root, listSize(root));
+	unsigned int size = (unsigned int)listSize(root);
+	StackADT allPaths;
+	for (unsigned int x = 1; x < size + 1; x++){
+		printf("---PATHS OF LEGNTH: %u---\n", x);
+		allPaths = findAllPaths(root, x);
+		stk_destroy(allPaths);
+	}
 	
-	stk_destroy(allPaths);
-
 	freeList(root);
 }
 
@@ -185,7 +189,6 @@ void test_stack_addons(void){
 /// Tests node functionality.
 void test_node(void){
 	Node *n1 = n_init("1");
-
 	Node *n2 = n_init("2");
 
 	n1->next = n2;

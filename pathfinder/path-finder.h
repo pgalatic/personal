@@ -5,9 +5,6 @@
 #ifndef _PATH_FINDER_H_
 #define _PATH_FINDER_H_
 
-#define MAX_SOLUTIONS 2
-#define BOARD_SIZE 5
-
 /// FUNCTIONS
 
 /// Takes lines one at a time from an input file
@@ -38,12 +35,14 @@ Node *parseNodeList(FILE *fp);
 /// args - 
 ///		Node *root - pointer to the root of the
 ///		linked list of nodes
+///		const unsigned int SIZE - the length of 
+///		the path to find
 ///
 /// returns - 
 ///		A 2D array populated with a list of 
 ///		paths.
 
-StackADT findAllPaths(Node *root, int NUMNODES);
+StackADT findAllPaths(Node *root, const unsigned int SIZE);
 
 
 #endif // PATH_FINDER_H

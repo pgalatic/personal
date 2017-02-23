@@ -86,6 +86,7 @@ void setAllTerminalFalse(Node *root){
 	
 }
 
+/// Finds and returns the length of the list.
 int listSize(Node *root){
 	int size = 0;
 	while (root != NULL){
