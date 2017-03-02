@@ -47,8 +47,8 @@ Node *parseNodeList(FILE *fp){
 }
 
 /// Traverses the list of nodes and determines
-/// all possible paths of BOARD_SIZE, based on 
-/// the Neighbors array of each Node. Includes
+/// all possible paths of SIZE, based on the
+/// Neighbors array of each Node. Includes
 /// paths that have a free space in the middle.
 StackADT findAllPaths(Node *root, const unsigned int SIZE){
 	Node *curr = root;
