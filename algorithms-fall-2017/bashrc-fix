@@ -1,0 +1,5 @@
+## add these aliases to the end of your .bashrc file
+## programming langauge concepts
+
+alias plcc=/usr/local/pub/tvf/bin/plcc
+alias plccmk=/usr/local/pub/tvf/bin/plccmk
